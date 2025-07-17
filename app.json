@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "app",
+    "slug": "mobile",
+    "version": "1.0.0",
+    "scheme": "app",
+    "orientation": "portrait",
+    "newArchEnabled": true,
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.app.mobile",
+      "icon": "./src/shared/assets/images/ios_icon.png",
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        },
+        "CFBundleDevelopmentRegion": "ru"
+      }
+    },
+    "android": {
+      "icon": "./src/shared/assets/images/android_icon.png",
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      },
+      "packageName": "com.app.mobile",
+      "package": "com.app.mobile"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#F84E53",
+          "image": "./src/shared/assets/images/logo.png",
+          "dark": {
+            "image": "./src/shared/assets/images/logo.png",
+            "backgroundColor": "#F84E53"
+          },
+          "imageWidth": 135
+        }
+      ],
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": ""
+      }
+    }
+  }
+}

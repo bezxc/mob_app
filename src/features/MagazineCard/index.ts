@@ -1,0 +1,1 @@
+export { MagazineCard } from "./ui";
